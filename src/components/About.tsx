@@ -1,9 +1,9 @@
 "use client";
 
-import { AnimatedSection } from "./AnimatedSection";
-import { SectionLabel } from "./SectionLabel";
 import { links } from "@/constants/links";
 import { useTranslations } from "next-intl";
+import { AnimatedSection } from "./AnimatedSection";
+import { SectionLabel } from "./SectionLabel";
 
 const pillars = [
   {
@@ -92,7 +92,7 @@ export function About() {
     <section id="about" className="relative overflow-hidden py-28 lg:py-36">
       {/* Background */}
       <div className="absolute inset-0 grid-pattern opacity-50" />
-      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
+      <div className="absolute left-0 right-0 top-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" />
 
       <div className="relative w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
         <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-24">
@@ -102,8 +102,10 @@ export function About() {
 
             <AnimatedSection>
               <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                {t("titlePrefix")}{" "}
-                <span className="text-gradient">{t("titleAccent")}</span>
+                {t("titlePrefix")}
+                <span className="mt-2 block text-gradient">
+                  {t("titleAccent")}
+                </span>
               </h2>
             </AnimatedSection>
 

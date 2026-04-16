@@ -13,6 +13,46 @@ const navLinks = [
   { labelKey: "evidence", href: "#evidence" },
 ];
 
+function LanguageSwitch({
+  href,
+  isZh,
+  label,
+}: {
+  href: string;
+  isZh: boolean;
+  label: string;
+}) {
+  return (
+    <a
+      href={href}
+      role="switch"
+      aria-checked={isZh}
+      aria-label={label}
+      className="relative inline-flex h-10 w-22 items-center rounded-lg border border-surface-border bg-surface p-1 text-xs font-semibold text-text-tertiary transition-colors hover:border-text-tertiary hover:bg-surface-light hover:text-foreground"
+    >
+      <span
+        className={`absolute left-1 top-1 h-8 w-10 rounded-md bg-gradient-accent transition-transform duration-300 ${
+          isZh ? "translate-x-10" : "translate-x-0"
+        }`}
+      />
+      <span
+        className={`relative z-10 flex w-10 justify-center transition-colors ${
+          isZh ? "text-text-tertiary" : "text-white"
+        }`}
+      >
+        EN
+      </span>
+      <span
+        className={`relative z-10 flex w-10 justify-center transition-colors ${
+          isZh ? "text-white" : "text-text-tertiary"
+        }`}
+      >
+        中
+      </span>
+    </a>
+  );
+}
+
 export function Navbar() {
   const t = useTranslations("Nav");
   const locale = useLocale();
@@ -20,6 +60,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const nextLocale = locale === "zh" ? "en" : "zh";
   const nextLocaleHref = `/${nextLocale}`;
+  const isZh = locale === "zh";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -65,13 +106,12 @@ export function Navbar() {
             </div>
 
             {/* CTA + Mobile toggle */}
-            <div className="flex items-center gap-4">
-              <a
+            <div className="flex items-center gap-2 md:gap-4">
+              <LanguageSwitch
                 href={nextLocaleHref}
-                className="hidden rounded-lg px-4 py-2.5 text-base font-medium text-text-secondary transition-colors hover:bg-surface-light hover:text-foreground md:inline-flex"
-              >
-                {t("language")}
-              </a>
+                isZh={isZh}
+                label={t("language")}
+              />
               <a
                 href={links.discord}
                 target="_blank"
@@ -85,22 +125,26 @@ export function Navbar() {
                 className="flex h-12 w-12 items-center justify-center rounded-lg transition-colors hover:bg-surface-light md:hidden"
                 aria-label={t("toggleMenu")}
               >
-                <div className="flex flex-col gap-1.5">
+                <div className="relative h-6 w-6">
                   <motion.span
                     animate={
-                      mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
+                      mobileOpen
+                        ? { rotate: 45, top: "50%" }
+                        : { rotate: 0, top: "25%" }
                     }
-                    className="block h-0.5 w-6 bg-foreground"
+                    className="absolute left-0 block h-0.5 w-6 -translate-y-1/2 bg-foreground"
                   />
                   <motion.span
                     animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-                    className="block h-0.5 w-6 bg-foreground"
+                    className="absolute left-0 top-1/2 block h-0.5 w-6 -translate-y-1/2 bg-foreground"
                   />
                   <motion.span
                     animate={
-                      mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
+                      mobileOpen
+                        ? { rotate: -45, top: "50%" }
+                        : { rotate: 0, top: "75%" }
                     }
-                    className="block h-0.5 w-6 bg-foreground"
+                    className="absolute left-0 block h-0.5 w-6 -translate-y-1/2 bg-foreground"
                   />
                 </div>
               </button>
@@ -130,13 +174,6 @@ export function Navbar() {
                   {t(link.labelKey)}
                 </a>
               ))}
-              <a
-                href={nextLocaleHref}
-                onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-4 py-3 text-lg text-text-secondary transition-colors hover:text-foreground hover:bg-surface-light"
-              >
-                {t("language")}
-              </a>
               <a
                 href={links.discord}
                 target="_blank"
