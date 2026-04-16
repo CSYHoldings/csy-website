@@ -46,7 +46,7 @@ export function Hero() {
           >
             {t("titleLine1")}
             <br />
-            <span className="text-gradient">{t("titleLine2")}</span>
+            <span className="text-accent">{t("titleLine2")}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -112,7 +112,7 @@ export function Hero() {
               { value: t("stats.dailyValue"), label: t("stats.dailyLabel") },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-gradient md:text-4xl">
+                <div className="text-3xl font-bold text-accent md:text-4xl">
                   {stat.value}
                 </div>
                 <div className="mt-2 text-base text-text-tertiary">

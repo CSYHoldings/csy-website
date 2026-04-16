@@ -105,7 +105,7 @@ export function Features() {
           <AnimatedSection>
             <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               {t("titlePrefix")}{" "}
-              <span className="text-gradient">{t("titleAccent")}</span>
+              <span className="text-accent">{t("titleAccent")}</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>

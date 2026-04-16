@@ -103,7 +103,7 @@ export function About() {
             <AnimatedSection>
               <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
                 {t("titlePrefix")}
-                <span className="mt-2 block text-gradient">
+                <span className="mt-2 block text-accent">
                   {t("titleAccent")}
                 </span>
               </h2>

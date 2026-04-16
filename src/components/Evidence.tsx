@@ -23,7 +23,7 @@ export function Evidence() {
     <section id="evidence" className="relative overflow-hidden py-28 lg:py-36">
       {/* Background */}
       <div className="absolute left-0 right-0 top-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" />
-      <div className="absolute left-0 top-1/3 h-125 w-125 rounded-full bg-purple-500/5 blur-[150px]" />
+      <div className="absolute left-0 top-1/3 h-125 w-125 rounded-full bg-accent/5 blur-[150px]" />
 
       <div className="relative w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
         {/* Header */}
@@ -32,7 +32,7 @@ export function Evidence() {
           <AnimatedSection>
             <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               {t("titlePrefix")}{" "}
-              <span className="text-gradient">{t("titleAccent")}</span>
+              <span className="text-accent">{t("titleAccent")}</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>

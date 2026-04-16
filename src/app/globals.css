@@ -3,16 +3,16 @@
 :root {
   --background: #0a0a0f;
   --foreground: #ededed;
-  --accent: #6366f1;
-  --accent-light: #818cf8;
-  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent: #d14e52;
+  --accent-light: #e4696d;
+  --accent-glow: rgba(209, 78, 82, 0.16);
   --surface: #111118;
   --surface-light: #1a1a24;
   --surface-border: rgba(255, 255, 255, 0.06);
   --text-secondary: #9ca3af;
   --text-tertiary: #6b7280;
-  --gradient-start: #6366f1;
-  --gradient-end: #a855f7;
+  --gradient-start: #d14e52;
+  --gradient-end: #e4696d;
 }
 
 @theme inline {
@@ -65,26 +65,13 @@ body {
 .glow-accent {
   box-shadow:
     0 0 40px var(--accent-glow),
-    0 0 80px rgba(99, 102, 241, 0.05);
-}
-
-.text-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    0 0 80px rgba(209, 78, 82, 0.05);
 }
 
 .bg-gradient-accent {
-  background: linear-gradient(
-    135deg,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 38%),
+    linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
 }
 
 /* Grid pattern overlay */

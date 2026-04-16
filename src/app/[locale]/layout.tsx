@@ -2,6 +2,7 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import {
   alternateLanguages,
+  brandColor,
   defaultOgImage,
   getAbsoluteUrl,
   getJsonLd,
@@ -11,7 +12,7 @@ import {
   type SiteLocale,
 } from "@/constants/seo";
 import { routing } from "@/i18n/routing";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -33,6 +34,11 @@ type LocaleLayoutProps = Readonly<{
 }>;
 
 const metadataBase = new URL(siteUrl);
+
+export const viewport: Viewport = {
+  themeColor: brandColor,
+  colorScheme: "dark",
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

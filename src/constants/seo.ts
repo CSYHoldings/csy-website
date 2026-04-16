@@ -3,6 +3,7 @@ import { routing } from "@/i18n/routing";
 
 export const siteUrl = "https://csyholdings.com";
 export const siteName = "CSY Group";
+export const brandColor = "#d14e52";
 export const defaultOgImage = `${siteUrl}/og-image.png`;
 
 export const localeMetadata = {

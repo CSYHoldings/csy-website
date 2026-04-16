@@ -1,4 +1,4 @@
-import { localeMetadata, siteName } from "@/constants/seo";
+import { brandColor, localeMetadata, siteName } from "@/constants/seo";
 import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -10,7 +10,7 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
     display: "standalone",
     background_color: "#07070c",
-    theme_color: "#7c5cff",
+    theme_color: brandColor,
     icons: [
       {
         src: "/icon-192.png",
