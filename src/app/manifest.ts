@@ -1,12 +1,13 @@
+import { localeMetadata, siteName } from "@/constants/seo";
 import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "CSY Group",
-    short_name: "CSY Group",
-    description:
-      "A Discord-based trading education community focused on depth data, order-flow context, and institutional positioning.",
-    start_url: "/",
+    name: siteName,
+    short_name: siteName,
+    description: localeMetadata.en.description,
+    start_url: "/en",
+    scope: "/",
     display: "standalone",
     background_color: "#07070c",
     theme_color: "#7c5cff",

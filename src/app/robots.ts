@@ -1,13 +1,15 @@
+import { getAbsoluteUrl } from "@/constants/seo";
 import type { MetadataRoute } from "next";
-
-const siteUrl = "https://csyholdings.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: `${siteUrl}/sitemap.xml`,
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+    ],
+    sitemap: getAbsoluteUrl("/sitemap.xml"),
   };
 }

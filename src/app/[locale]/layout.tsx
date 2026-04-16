@@ -1,5 +1,15 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import {
+  alternateLanguages,
+  defaultOgImage,
+  getAbsoluteUrl,
+  getJsonLd,
+  getLocaleMetadata,
+  siteName,
+  siteUrl,
+  type SiteLocale,
+} from "@/constants/seo";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -22,27 +32,7 @@ type LocaleLayoutProps = Readonly<{
   params: Promise<{ locale: string }>;
 }>;
 
-const metadataByLocale = {
-  en: {
-    title: "CSY Group | Trade With Structure",
-    description:
-      "CSY Group is a Discord-based trading education community. Our edge is depth data: reading how institutional money positions and where flow is heading.",
-  },
-  zh: {
-    title: "CSY Group | 结构化交易",
-    description:
-      "CSY Group 是一个以 Discord 为核心的交易教育社区，专注于深度数据、订单流语境与机构资金定位。",
-  },
-} as const;
-
-const siteUrl = "https://csyholdings.com";
 const metadataBase = new URL(siteUrl);
-const ogImageUrl = `${siteUrl}/og-image.png`;
-const languages = {
-  en: "/en",
-  zh: "/zh",
-  "x-default": `/${routing.defaultLocale}`,
-};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -54,35 +44,59 @@ export async function generateMetadata({
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
-    return metadataByLocale[routing.defaultLocale];
+    const metadata = getLocaleMetadata(routing.defaultLocale);
+
+    return {
+      title: metadata.title,
+      description: metadata.description,
+    };
   }
 
-  const metadata = metadataByLocale[locale];
+  const metadata = getLocaleMetadata(locale);
   const path = `/${locale}`;
+  const url = getAbsoluteUrl(path);
 
   return {
     metadataBase,
     title: metadata.title,
     description: metadata.description,
+    applicationName: siteName,
+    authors: [{ name: siteName, url: siteUrl }],
+    creator: siteName,
+    publisher: siteName,
+    category: "Trading education",
+    keywords: [...metadata.keywords],
     manifest: "/manifest.webmanifest",
+    referrer: "origin-when-cross-origin",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     alternates: {
       canonical: path,
-      languages,
+      languages: alternateLanguages,
     },
     openGraph: {
       title: metadata.title,
       description: metadata.description,
-      url: path,
-      siteName: "CSY Group",
-      locale: locale === "zh" ? "zh_CN" : "en_US",
-      alternateLocale: locale === "zh" ? ["en_US"] : ["zh_CN"],
+      url,
+      siteName,
+      locale: metadata.locale,
+      alternateLocale: [metadata.alternateLocale],
       type: "website",
       images: [
         {
-          url: ogImageUrl,
+          url: defaultOgImage,
           width: 1200,
           height: 630,
-          alt: "CSY Group",
+          alt: `${siteName} trading education community`,
         },
       ],
     },
@@ -90,12 +104,15 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: metadata.title,
       description: metadata.description,
-      images: [ogImageUrl],
+      images: [defaultOgImage],
     },
     appleWebApp: {
-      title: "CSY Group",
+      title: siteName,
       capable: true,
       statusBarStyle: "black-translucent",
+    },
+    formatDetection: {
+      telephone: false,
     },
   };
 }
@@ -110,7 +127,9 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  const siteLocale = locale as SiteLocale;
   const messages = (await import(`../../../messages/${locale}.json`)).default;
+  const jsonLd = getJsonLd(siteLocale);
 
   return (
     <html
@@ -123,6 +142,11 @@ export default async function LocaleLayout({
           locale={locale}
           messages={messages}
         >
+          <script
+            type="application/ld+json"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
           <Navbar />
           {children}
           <Footer />
