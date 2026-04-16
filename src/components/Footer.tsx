@@ -1,5 +1,7 @@
 "use client";
 
+import { links } from "@/constants/links";
+
 export function Footer() {
   return (
     <footer className="relative border-t border-surface-border bg-surface/50">
@@ -54,7 +56,7 @@ export function Footer() {
             <ul className="mt-5 space-y-4">
               <li>
                 <a
-                  href="https://discord.gg/6mXx8gzE"
+                  href={links.discord}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-base text-text-secondary transition-colors hover:text-foreground"
@@ -72,7 +74,7 @@ export function Footer() {
             </ul>
             <div className="mt-8">
               <a
-                href="https://discord.gg/6mXx8gzE"
+                href={links.discord}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-accent px-7 py-3 text-base font-medium text-white transition-all hover:shadow-lg hover:shadow-accent/25"

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { links } from "@/constants/links";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -61,7 +62,7 @@ export function Navbar() {
             {/* CTA + Mobile toggle */}
             <div className="flex items-center gap-4">
               <a
-                href="https://discord.gg/6mXx8gzE"
+                href={links.discord}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden rounded-full bg-gradient-accent px-7 py-3 text-base font-medium text-white transition-all hover:shadow-lg hover:shadow-accent/25 hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
@@ -76,9 +77,7 @@ export function Navbar() {
                 <div className="flex flex-col gap-1.5">
                   <motion.span
                     animate={
-                      mobileOpen
-                        ? { rotate: 45, y: 6 }
-                        : { rotate: 0, y: 0 }
+                      mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
                     }
                     className="block h-0.5 w-6 bg-foreground"
                   />
@@ -88,9 +87,7 @@ export function Navbar() {
                   />
                   <motion.span
                     animate={
-                      mobileOpen
-                        ? { rotate: -45, y: -6 }
-                        : { rotate: 0, y: 0 }
+                      mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
                     }
                     className="block h-0.5 w-6 bg-foreground"
                   />
@@ -123,7 +120,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="https://discord.gg/6mXx8gzE"
+                href={links.discord}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 rounded-full bg-gradient-accent px-6 py-4 text-center text-base font-medium text-white"
