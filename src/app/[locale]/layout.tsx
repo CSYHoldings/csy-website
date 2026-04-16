@@ -35,6 +35,15 @@ const metadataByLocale = {
   },
 } as const;
 
+const siteUrl = "https://csyholdings.com";
+const metadataBase = new URL(siteUrl);
+const ogImageUrl = `${siteUrl}/og-image.png`;
+const languages = {
+  en: "/en",
+  zh: "/zh",
+  "x-default": `/${routing.defaultLocale}`,
+};
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -48,7 +57,47 @@ export async function generateMetadata({
     return metadataByLocale[routing.defaultLocale];
   }
 
-  return metadataByLocale[locale];
+  const metadata = metadataByLocale[locale];
+  const path = `/${locale}`;
+
+  return {
+    metadataBase,
+    title: metadata.title,
+    description: metadata.description,
+    manifest: "/manifest.webmanifest",
+    alternates: {
+      canonical: path,
+      languages,
+    },
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      url: path,
+      siteName: "CSY Group",
+      locale: locale === "zh" ? "zh_CN" : "en_US",
+      alternateLocale: locale === "zh" ? ["en_US"] : ["zh_CN"],
+      type: "website",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: "CSY Group",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metadata.title,
+      description: metadata.description,
+      images: [ogImageUrl],
+    },
+    appleWebApp: {
+      title: "CSY Group",
+      capable: true,
+      statusBarStyle: "black-translucent",
+    },
+  };
 }
 
 export default async function LocaleLayout({

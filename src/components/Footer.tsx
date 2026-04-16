@@ -25,7 +25,7 @@ export function Footer() {
             <div className="relative h-16 w-44 overflow-hidden">
               <Image
                 fill
-                sizes="128px"
+                sizes="176px"
                 src="/logo.png"
                 alt={t("brand")}
                 className="object-contain object-left"
