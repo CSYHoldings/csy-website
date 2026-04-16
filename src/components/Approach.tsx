@@ -43,8 +43,7 @@ export function Approach() {
           <SectionLabel label="Our Trading Approach" />
           <AnimatedSection>
             <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              From Data to{" "}
-              <span className="text-gradient">Execution</span>
+              From Data to <span className="text-gradient">Execution</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>

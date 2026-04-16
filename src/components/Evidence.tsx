@@ -34,8 +34,7 @@ export function Evidence() {
           <SectionLabel label="ATAS-Style Chart Evidence" />
           <AnimatedSection>
             <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              See the{" "}
-              <span className="text-gradient">Execution Evidence</span>
+              See the <span className="text-gradient">Execution Evidence</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
