@@ -1,8 +1,8 @@
 "use client";
 
+import { links } from "@/constants/links";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { links } from "@/constants/links";
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -14,10 +14,10 @@ export function Hero() {
     >
       {/* Background effects */}
       <div className="absolute inset-0 grid-pattern" />
-      <div className="absolute left-1/2 top-1/3 h-[800px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/5 blur-[160px]" />
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute left-1/2 top-1/3 h-200 w-250 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/5 blur-[160px]" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-background to-transparent" />
 
-      <div className="relative z-10 w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16 pb-24 pt-40">
+      <div className="relative z-10 w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16 pb-24 pt-28 md:pt-40">
         <div className="flex flex-col items-center text-center">
           {/* Badge */}
           <motion.div
