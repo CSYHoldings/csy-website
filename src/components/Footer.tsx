@@ -71,6 +71,27 @@ export function Footer() {
                   Discord
                 </a>
               </li>
+              <li>
+                <a
+                  href={links.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-base text-text-secondary transition-colors hover:text-foreground"
+                >
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.8}
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                  </svg>
+                  Instagram
+                </a>
+              </li>
             </ul>
             <div className="mt-8">
               <a
