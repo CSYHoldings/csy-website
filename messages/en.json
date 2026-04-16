@@ -1,1 +1,146 @@
-{}
+{
+  "Nav": {
+    "brand": "CSY Group",
+    "home": "Home",
+    "about": "About",
+    "features": "Features",
+    "approach": "Approach",
+    "evidence": "Evidence",
+    "joinDiscord": "Join Discord",
+    "language": "中文",
+    "toggleMenu": "Toggle menu"
+  },
+  "Hero": {
+    "badge": "Live Sessions Tue-Thu ~9PM",
+    "titleLine1": "Trade With Structure.",
+    "titleLine2": "Learn With Precision.",
+    "subtitle": "CSY Group runs a Discord trading community with daily market analysis, focused chat, and live trade sessions. Our edge is depth data — reading institutional flow and turning it into execution.",
+    "primaryCta": "Join Our Discord",
+    "secondaryCta": "Explore Framework",
+    "scroll": "Scroll",
+    "stats": {
+      "marketValue": "Gold",
+      "marketLabel": "& Crypto Markets",
+      "liveValue": "Live",
+      "liveLabel": "Tue - Thu ~9PM",
+      "depthValue": "ATAS",
+      "depthLabel": "Depth Data Edge",
+      "dailyValue": "Daily",
+      "dailyLabel": "Market Analysis"
+    }
+  },
+  "About": {
+    "label": "About CSY Group",
+    "titlePrefix": "Depth Data.",
+    "titleAccent": "Institutional Edge.",
+    "paragraph1": "CSY Group is a Discord-based trading education community. Our edge is depth data: reading how institutional money positions and where flow is heading, then translating that into practical execution.",
+    "paragraph2": "We don't rely on random indicators. We focus on order-flow context, institutional positioning, and ATAS-style depth analysis to build high-conviction trade plans.",
+    "cta": "Join Community",
+    "pillars": {
+      "daily": {
+        "title": "Daily Analysis",
+        "desc": "Every day we break down market structure, identify key levels, and map out high-probability scenarios."
+      },
+      "community": {
+        "title": "Community",
+        "desc": "Real-time chat, Q&A, and trader-to-trader review in a focused Discord environment."
+      },
+      "coaching": {
+        "title": "Live Coaching",
+        "desc": "Tuesday to Thursday around 9PM with live decision process, real-time execution walkthrough."
+      },
+      "flow": {
+        "title": "Flow Lens",
+        "desc": "Use ATAS-style depth data to read larger money movement and institutional positioning."
+      }
+    }
+  },
+  "Features": {
+    "label": "What Members Get",
+    "titlePrefix": "Discover Powerful",
+    "titleAccent": "Features",
+    "subtitle": "Everything you need to develop an institutional-grade trading approach, from live coaching to depth data analysis.",
+    "items": {
+      "daily": {
+        "title": "Daily Market Analysis",
+        "desc": "Daily market analysis and idea sharing in Discord. We break down structure, identify levels, and share actionable setups."
+      },
+      "live": {
+        "title": "Live Trade Sessions",
+        "desc": "Live trade sessions from Tuesday to Thursday around 9PM with live decision process and real-time execution."
+      },
+      "coaching": {
+        "title": "Technical Coaching",
+        "desc": "Technical coaching during and beyond live sessions. Personal feedback on your entries, risk management, and trade reviews."
+      },
+      "flow": {
+        "title": "Institutional Flow View",
+        "desc": "Institutional flow view using ATAS-style depth data. See where the big money is positioning before making your move."
+      }
+    }
+  },
+  "Approach": {
+    "label": "Our Trading Approach",
+    "titlePrefix": "From Data to",
+    "titleAccent": "Execution",
+    "subtitle": "We do not rely on random indicators. CSY focuses on depth data, order-flow context, and institutional positioning to build high-conviction trade plans.",
+    "steps": {
+      "data": {
+        "title": "Data Read",
+        "desc": "Track how liquidity and aggressive flow behave at key levels. Understand what the depth data is showing before any decision."
+      },
+      "direction": {
+        "title": "Direction",
+        "desc": "Identify where larger capital is building pressure. Use institutional flow to determine the most probable market direction."
+      },
+      "execution": {
+        "title": "Execution",
+        "desc": "Turn data into entries, risk controls, and management. Precise entry points with defined stop-loss and take-profit levels."
+      },
+      "validation": {
+        "title": "Validation",
+        "desc": "Practice the same logic in live sessions and daily review. Refine your process through repetition and community feedback."
+      }
+    }
+  },
+  "Evidence": {
+    "label": "ATAS-Style Chart Evidence",
+    "titlePrefix": "See the",
+    "titleAccent": "Execution Evidence",
+    "subtitle": "Inside our sessions, we combine chart structure with depth-style execution evidence. You will see bubble-style pressure areas and cluster/diamond-style confirmation logic before execution.",
+    "charts": {
+      "bubble": {
+        "title": "Bubble Pressure + Reaction Zone",
+        "label": "Bubble",
+        "description": "Bubble-style pressure areas reveal where institutional orders are clustering. Watch how price reacts at these high-volume zones for confirmation before entry."
+      },
+      "cluster": {
+        "title": "Cluster Flow + Diamond Logic",
+        "label": "Cluster",
+        "description": "Cluster and diamond-style confirmation logic shows the exact points where aggressive buying or selling meets passive orders, giving clear execution signals."
+      }
+    }
+  },
+  "CTA": {
+    "titlePrefix": "Ready to Trade With",
+    "titleAccent": "Structure?",
+    "subtitle": "Join our Discord community and start learning how to read institutional flow, build high-conviction trade plans, and execute with precision.",
+    "button": "Join Our Discord",
+    "checks": {
+      "markets": "Gold & Crypto Markets",
+      "sessions": "Live Sessions Tue-Thu",
+      "depth": "ATAS-Style Depth Data"
+    }
+  },
+  "Footer": {
+    "brand": "CSY Group",
+    "description": "A Discord-based trading education community focused on depth data, order-flow context, and institutional positioning.",
+    "navigation": "Navigation",
+    "community": "Community",
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "joinCommunity": "Join Community",
+    "copyright": "© {year} CSY Group. All Rights Reserved.",
+    "tagline": "Precision Trading · Depth Data · Institutional Edge"
+  }
+}

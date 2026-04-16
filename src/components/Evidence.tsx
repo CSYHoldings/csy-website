@@ -1,47 +1,43 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { AnimatedSection, SlideInLeft, SlideInRight } from "./AnimatedSection";
 import { SectionLabel } from "./SectionLabel";
 
 const chartTypes = [
   {
-    title: "Bubble Pressure + Reaction Zone",
-    label: "Bubble",
+    key: "bubble",
     src: "/atas-bubble.png",
-    description:
-      "Bubble-style pressure areas reveal where institutional orders are clustering. Watch how price reacts at these high-volume zones for confirmation before entry.",
   },
   {
-    title: "Cluster Flow + Diamond Logic",
-    label: "Cluster",
+    key: "cluster",
     src: "/atas-cluster.png",
-    description:
-      "Cluster and diamond-style confirmation logic shows the exact points where aggressive buying or selling meets passive orders, giving clear execution signals.",
   },
 ];
 
 export function Evidence() {
+  const t = useTranslations("Evidence");
+
   return (
     <section id="evidence" className="relative overflow-hidden py-28 lg:py-36">
       {/* Background */}
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
       <div className="absolute left-0 top-1/3 h-[500px] w-[500px] rounded-full bg-purple-500/5 blur-[150px]" />
 
-      <div className="relative w-full max-w-[1400px] mx-auto px-8 md:px-12 lg:px-16">
+      <div className="relative w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <SectionLabel label="ATAS-Style Chart Evidence" />
+          <SectionLabel label={t("label")} />
           <AnimatedSection>
             <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              See the <span className="text-gradient">Execution Evidence</span>
+              {t("titlePrefix")}{" "}
+              <span className="text-gradient">{t("titleAccent")}</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <p className="mt-6 text-lg text-text-secondary lg:text-xl">
-              Inside our sessions, we combine chart structure with depth-style
-              execution evidence. You will see bubble-style pressure areas and
-              cluster/diamond-style confirmation logic before execution.
+              {t("subtitle")}
             </p>
           </AnimatedSection>
         </div>
@@ -51,7 +47,7 @@ export function Evidence() {
           {chartTypes.map((chart, i) => {
             const Wrapper = i % 2 === 0 ? SlideInLeft : SlideInRight;
             return (
-              <Wrapper key={chart.label}>
+              <Wrapper key={chart.key}>
                 <div className="border-gradient group overflow-hidden rounded-3xl transition-all duration-300 hover:bg-surface-light">
                   <div className="grid items-center gap-0 lg:grid-cols-2">
                     {/* Image */}
@@ -63,7 +59,7 @@ export function Evidence() {
                       <div className="absolute inset-0 z-10 bg-gradient-to-br from-accent/5 to-transparent" />
                       <Image
                         src={chart.src}
-                        alt={chart.title}
+                        alt={t(`charts.${chart.key}.title`)}
                         fill
                         sizes="(min-width: 1024px) 50vw, 100vw"
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -77,13 +73,13 @@ export function Evidence() {
                       }`}
                     >
                       <span className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-light">
-                        {chart.label}
+                        {t(`charts.${chart.key}.label`)}
                       </span>
                       <h3 className="mt-5 text-3xl font-bold text-foreground lg:text-4xl">
-                        {chart.title}
+                        {t(`charts.${chart.key}.title`)}
                       </h3>
                       <p className="mt-5 text-lg leading-relaxed text-text-secondary">
-                        {chart.description}
+                        {t(`charts.${chart.key}.description`)}
                       </p>
                     </div>
                   </div>

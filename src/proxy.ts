@@ -2,9 +2,7 @@ import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
-
-const locales = ["en", "zh"];
-const defaultLocale = "zh";
+import { routing } from "./i18n/routing";
 
 function getLocale(request: Request) {
   const negotiatorHeaders: Record<string, string> = {};
@@ -15,14 +13,14 @@ function getLocale(request: Request) {
 
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
 
-  return match(languages, locales, defaultLocale);
+  return match(languages, [...routing.locales], routing.defaultLocale);
 }
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Skip if already has locale
-  const pathnameHasLocale = locales.some(
+  const pathnameHasLocale = routing.locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 

@@ -1,20 +1,25 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { links } from "@/constants/links";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Features", href: "#features" },
-  { label: "Approach", href: "#approach" },
-  { label: "Evidence", href: "#evidence" },
+  { labelKey: "home", href: "#home" },
+  { labelKey: "about", href: "#about" },
+  { labelKey: "features", href: "#features" },
+  { labelKey: "approach", href: "#approach" },
+  { labelKey: "evidence", href: "#evidence" },
 ];
 
 export function Navbar() {
+  const t = useTranslations("Nav");
+  const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const nextLocale = locale === "zh" ? "en" : "zh";
+  const nextLocaleHref = `/${nextLocale}`;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -34,7 +39,7 @@ export function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="w-full max-w-[1400px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex h-20 items-center justify-between lg:h-24">
             {/* Logo */}
             <a href="#home" className="flex items-center gap-3 group">
@@ -42,7 +47,7 @@ export function Navbar() {
                 <span className="text-sm font-bold text-white">CSY</span>
               </div>
               <span className="text-xl font-semibold tracking-tight text-foreground group-hover:text-accent-light transition-colors">
-                CSY Group
+                {t("brand")}
               </span>
             </a>
 
@@ -54,7 +59,7 @@ export function Navbar() {
                   href={link.href}
                   className="rounded-lg px-5 py-2.5 text-base text-text-secondary transition-colors hover:text-foreground hover:bg-surface-light"
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                 </a>
               ))}
             </div>
@@ -62,17 +67,23 @@ export function Navbar() {
             {/* CTA + Mobile toggle */}
             <div className="flex items-center gap-4">
               <a
+                href={nextLocaleHref}
+                className="hidden rounded-lg px-4 py-2.5 text-base font-medium text-text-secondary transition-colors hover:bg-surface-light hover:text-foreground md:inline-flex"
+              >
+                {t("language")}
+              </a>
+              <a
                 href={links.discord}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden rounded-full bg-gradient-accent px-7 py-3 text-base font-medium text-white transition-all hover:shadow-lg hover:shadow-accent/25 hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
               >
-                Join Discord
+                {t("joinDiscord")}
               </a>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="flex h-12 w-12 items-center justify-center rounded-lg transition-colors hover:bg-surface-light md:hidden"
-                aria-label="Toggle menu"
+                aria-label={t("toggleMenu")}
               >
                 <div className="flex flex-col gap-1.5">
                   <motion.span
@@ -116,16 +127,23 @@ export function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="rounded-lg px-4 py-3 text-lg text-text-secondary transition-colors hover:text-foreground hover:bg-surface-light"
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                 </a>
               ))}
+              <a
+                href={nextLocaleHref}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-lg px-4 py-3 text-lg text-text-secondary transition-colors hover:text-foreground hover:bg-surface-light"
+              >
+                {t("language")}
+              </a>
               <a
                 href={links.discord}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 rounded-full bg-gradient-accent px-6 py-4 text-center text-base font-medium text-white"
               >
-                Join Discord
+                {t("joinDiscord")}
               </a>
             </div>
           </motion.div>

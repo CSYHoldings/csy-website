@@ -1,1 +1,146 @@
-{}
+{
+  "Nav": {
+    "brand": "CSY Group",
+    "home": "首页",
+    "about": "关于",
+    "features": "会员内容",
+    "approach": "交易方法",
+    "evidence": "图表证据",
+    "joinDiscord": "加入 Discord",
+    "language": "EN",
+    "toggleMenu": "打开菜单"
+  },
+  "Hero": {
+    "badge": "每周二至周四约晚上 9 点直播",
+    "titleLine1": "用结构交易。",
+    "titleLine2": "用精度学习。",
+    "subtitle": "CSY Group 是一个 Discord 交易社区，提供每日市场分析、专注交流和实时交易直播。我们的优势是深度数据：读懂机构订单流，并转化为可执行的交易计划。",
+    "primaryCta": "加入我们的 Discord",
+    "secondaryCta": "了解交易框架",
+    "scroll": "向下滚动",
+    "stats": {
+      "marketValue": "黄金",
+      "marketLabel": "与加密市场",
+      "liveValue": "直播",
+      "liveLabel": "周二至周四约 9PM",
+      "depthValue": "ATAS",
+      "depthLabel": "深度数据优势",
+      "dailyValue": "每日",
+      "dailyLabel": "市场分析"
+    }
+  },
+  "About": {
+    "label": "关于 CSY Group",
+    "titlePrefix": "深度数据。",
+    "titleAccent": "机构优势。",
+    "paragraph1": "CSY Group 是一个以 Discord 为核心的交易教育社区。我们的优势是深度数据：理解机构资金如何布局、资金流向哪里，并把这些信息转化为实际执行。",
+    "paragraph2": "我们不依赖随机指标。我们专注于订单流语境、机构定位和 ATAS 风格的深度分析，用来建立高信心交易计划。",
+    "cta": "加入社区",
+    "pillars": {
+      "daily": {
+        "title": "每日分析",
+        "desc": "每天拆解市场结构、标记关键价位，并规划高概率情景。"
+      },
+      "community": {
+        "title": "社区交流",
+        "desc": "在专注的 Discord 环境中进行实时聊天、问答和交易者之间的复盘。"
+      },
+      "coaching": {
+        "title": "直播指导",
+        "desc": "每周二至周四约晚上 9 点，展示实时决策过程和执行思路。"
+      },
+      "flow": {
+        "title": "订单流视角",
+        "desc": "通过 ATAS 风格深度数据，读懂更大资金的移动和机构定位。"
+      }
+    }
+  },
+  "Features": {
+    "label": "会员可获得",
+    "titlePrefix": "掌握核心",
+    "titleAccent": "交易能力",
+    "subtitle": "从直播指导到深度数据分析，帮助你建立机构级别的交易方法。",
+    "items": {
+      "daily": {
+        "title": "每日市场分析",
+        "desc": "在 Discord 中进行每日市场分析和思路分享。我们拆解结构、识别价位，并分享可执行的交易情景。"
+      },
+      "live": {
+        "title": "实时交易直播",
+        "desc": "每周二至周四约晚上 9 点直播交易，展示实时决策过程和执行细节。"
+      },
+      "coaching": {
+        "title": "技术指导",
+        "desc": "在直播期间和直播之外提供技术指导，针对进场、风险管理和交易复盘给出反馈。"
+      },
+      "flow": {
+        "title": "机构订单流视角",
+        "desc": "使用 ATAS 风格深度数据观察机构资金流，了解大资金在你进场前可能如何布局。"
+      }
+    }
+  },
+  "Approach": {
+    "label": "我们的交易方法",
+    "titlePrefix": "从数据到",
+    "titleAccent": "执行",
+    "subtitle": "我们不依赖随机指标。CSY 专注于深度数据、订单流语境与机构定位，用来建立高信心交易计划。",
+    "steps": {
+      "data": {
+        "title": "读取数据",
+        "desc": "追踪关键价位上的流动性与主动订单流变化。在做决定前，先理解深度数据正在透露什么。"
+      },
+      "direction": {
+        "title": "判断方向",
+        "desc": "识别较大资金正在累积压力的位置，用机构订单流判断更可能的市场方向。"
+      },
+      "execution": {
+        "title": "执行计划",
+        "desc": "把数据转化为进场、风险控制和管理计划，明确止损与止盈位置。"
+      },
+      "validation": {
+        "title": "验证复盘",
+        "desc": "在直播和每日复盘中反复练习同一套逻辑，通过重复和社区反馈完善流程。"
+      }
+    }
+  },
+  "Evidence": {
+    "label": "ATAS 风格图表证据",
+    "titlePrefix": "看见",
+    "titleAccent": "执行证据",
+    "subtitle": "在我们的直播中，会把图表结构与深度数据证据结合起来。执行前，你会看到气泡压力区以及 cluster/diamond 风格的确认逻辑。",
+    "charts": {
+      "bubble": {
+        "title": "气泡压力 + 反应区域",
+        "label": "气泡",
+        "description": "气泡式压力区域显示机构订单可能聚集的位置。观察价格在高成交区域的反应，用来确认进场。"
+      },
+      "cluster": {
+        "title": "Cluster 订单流 + Diamond 逻辑",
+        "label": "Cluster",
+        "description": "Cluster 与 diamond 风格确认逻辑显示主动买卖与被动挂单交汇的位置，帮助形成清晰的执行信号。"
+      }
+    }
+  },
+  "CTA": {
+    "titlePrefix": "准备好用",
+    "titleAccent": "结构交易了吗？",
+    "subtitle": "加入我们的 Discord 社区，学习如何读懂机构订单流、建立高信心交易计划，并更精准地执行。",
+    "button": "加入我们的 Discord",
+    "checks": {
+      "markets": "黄金与加密市场",
+      "sessions": "周二至周四直播",
+      "depth": "ATAS 风格深度数据"
+    }
+  },
+  "Footer": {
+    "brand": "CSY Group",
+    "description": "一个专注于深度数据、订单流语境与机构定位的 Discord 交易教育社区。",
+    "navigation": "导航",
+    "community": "社区",
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "joinCommunity": "加入社区",
+    "copyright": "© {year} CSY Group. 保留所有权利。",
+    "tagline": "精准交易 · 深度数据 · 机构优势"
+  }
+}

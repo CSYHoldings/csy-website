@@ -3,9 +3,11 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { SectionLabel } from "./SectionLabel";
 import { links } from "@/constants/links";
+import { useTranslations } from "next-intl";
 
 const pillars = [
   {
+    key: "daily",
     icon: (
       <svg
         className="h-7 w-7"
@@ -21,10 +23,9 @@ const pillars = [
         />
       </svg>
     ),
-    title: "Daily Analysis",
-    desc: "Every day we break down market structure, identify key levels, and map out high-probability scenarios.",
   },
   {
+    key: "community",
     icon: (
       <svg
         className="h-7 w-7"
@@ -40,10 +41,9 @@ const pillars = [
         />
       </svg>
     ),
-    title: "Community",
-    desc: "Real-time chat, Q&A, and trader-to-trader review in a focused Discord environment.",
   },
   {
+    key: "coaching",
     icon: (
       <svg
         className="h-7 w-7"
@@ -59,10 +59,9 @@ const pillars = [
         />
       </svg>
     ),
-    title: "Live Coaching",
-    desc: "Tuesday to Thursday around 9PM with live decision process, real-time execution walkthrough.",
   },
   {
+    key: "flow",
     icon: (
       <svg
         className="h-7 w-7"
@@ -83,45 +82,40 @@ const pillars = [
         />
       </svg>
     ),
-    title: "Flow Lens",
-    desc: "Use ATAS-style depth data to read larger money movement and institutional positioning.",
   },
 ];
 
 export function About() {
+  const t = useTranslations("About");
+
   return (
     <section id="about" className="relative overflow-hidden py-28 lg:py-36">
       {/* Background */}
       <div className="absolute inset-0 grid-pattern opacity-50" />
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
 
-      <div className="relative w-full max-w-[1400px] mx-auto px-8 md:px-12 lg:px-16">
+      <div className="relative w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
         <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left - Text content */}
           <div>
-            <SectionLabel label="About CSY Group" />
+            <SectionLabel label={t("label")} />
 
             <AnimatedSection>
               <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                Depth Data.{" "}
-                <span className="text-gradient">Institutional Edge.</span>
+                {t("titlePrefix")}{" "}
+                <span className="text-gradient">{t("titleAccent")}</span>
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
               <p className="mt-8 text-lg leading-relaxed text-text-secondary lg:text-xl lg:leading-relaxed">
-                CSY Group is a Discord-based trading education community. Our
-                edge is depth data: reading how institutional money positions
-                and where flow is heading, then translating that into practical
-                execution.
+                {t("paragraph1")}
               </p>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <p className="mt-5 text-lg leading-relaxed text-text-secondary lg:text-xl lg:leading-relaxed">
-                We don&apos;t rely on random indicators. We focus on order-flow
-                context, institutional positioning, and ATAS-style depth
-                analysis to build high-conviction trade plans.
+                {t("paragraph2")}
               </p>
             </AnimatedSection>
 
@@ -133,7 +127,7 @@ export function About() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-accent px-8 py-4 text-base font-medium text-white transition-all hover:shadow-lg hover:shadow-accent/25 hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  Join Community
+                  {t("cta")}
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -155,16 +149,16 @@ export function About() {
           {/* Right - Pillar cards */}
           <div className="grid gap-5 sm:grid-cols-2">
             {pillars.map((pillar, i) => (
-              <AnimatedSection key={pillar.title} delay={i * 0.1}>
+              <AnimatedSection key={pillar.key} delay={i * 0.1}>
                 <div className="border-gradient group rounded-2xl p-8 transition-all duration-300 hover:bg-surface-light h-full">
                   <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent-light transition-colors group-hover:bg-accent/20">
                     {pillar.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">
-                    {pillar.title}
+                    {t(`pillars.${pillar.key}.title`)}
                   </h3>
                   <p className="mt-3 text-base leading-relaxed text-text-secondary">
-                    {pillar.desc}
+                    {t(`pillars.${pillar.key}.desc`)}
                   </p>
                 </div>
               </AnimatedSection>

@@ -2,12 +2,12 @@
 
 import { AnimatedSection } from "./AnimatedSection";
 import { SectionLabel } from "./SectionLabel";
+import { useTranslations } from "next-intl";
 
 const features = [
   {
+    key: "daily",
     number: "01",
-    title: "Daily Market Analysis",
-    desc: "Daily market analysis and idea sharing in Discord. We break down structure, identify levels, and share actionable setups.",
     icon: (
       <svg
         className="h-8 w-8"
@@ -25,9 +25,8 @@ const features = [
     ),
   },
   {
+    key: "live",
     number: "02",
-    title: "Live Trade Sessions",
-    desc: "Live trade sessions from Tuesday to Thursday around 9PM with live decision process and real-time execution.",
     icon: (
       <svg
         className="h-8 w-8"
@@ -45,9 +44,8 @@ const features = [
     ),
   },
   {
+    key: "coaching",
     number: "03",
-    title: "Technical Coaching",
-    desc: "Technical coaching during and beyond live sessions. Personal feedback on your entries, risk management, and trade reviews.",
     icon: (
       <svg
         className="h-8 w-8"
@@ -65,9 +63,8 @@ const features = [
     ),
   },
   {
+    key: "flow",
     number: "04",
-    title: "Institutional Flow View",
-    desc: "Institutional flow view using ATAS-style depth data. See where the big money is positioning before making your move.",
     icon: (
       <svg
         className="h-8 w-8"
@@ -92,6 +89,8 @@ const features = [
 ];
 
 export function Features() {
+  const t = useTranslations("Features");
+
   return (
     <section id="features" className="relative overflow-hidden py-28 lg:py-36">
       {/* Background */}
@@ -99,19 +98,19 @@ export function Features() {
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
       <div className="absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-accent/3 blur-[180px]" />
 
-      <div className="relative w-full max-w-[1400px] mx-auto px-8 md:px-12 lg:px-16">
+      <div className="relative w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <SectionLabel label="What Members Get" />
+          <SectionLabel label={t("label")} />
           <AnimatedSection>
             <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              Discover Powerful <span className="text-gradient">Features</span>
+              {t("titlePrefix")}{" "}
+              <span className="text-gradient">{t("titleAccent")}</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <p className="mt-6 text-lg text-text-secondary lg:text-xl">
-              Everything you need to develop an institutional-grade trading
-              approach, from live coaching to depth data analysis.
+              {t("subtitle")}
             </p>
           </AnimatedSection>
         </div>
@@ -136,12 +135,12 @@ export function Features() {
                         {feature.number}
                       </span>
                       <h3 className="text-2xl font-semibold text-foreground">
-                        {feature.title}
+                        {t(`items.${feature.key}.title`)}
                       </h3>
                     </div>
                   </div>
                   <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-                    {feature.desc}
+                    {t(`items.${feature.key}.desc`)}
                   </p>
                 </div>
               </div>
