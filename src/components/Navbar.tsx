@@ -1,9 +1,10 @@
 "use client";
 
+import { links } from "@/constants/links";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { links } from "@/constants/links";
 import { LanguageSwitch } from "./LanguageSwitch";
 
 const navLinks = [
@@ -44,13 +45,17 @@ export function Navbar() {
         <div className="w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex h-20 items-center justify-between lg:h-24">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-3 group">
-              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-accent">
-                <span className="text-sm font-bold text-white">CSY</span>
+            <a href="#home" className="group inline-flex items-center">
+              <div className="relative h-12 w-32 overflow-hidden">
+                <Image
+                  fill
+                  sizes="128px"
+                  src="/logo.png"
+                  alt={t("brand")}
+                  className="object-contain object-left"
+                  priority
+                />
               </div>
-              <span className="text-xl font-semibold tracking-tight text-foreground group-hover:text-accent-light transition-colors">
-                {t("brand")}
-              </span>
             </a>
 
             {/* Desktop Nav */}

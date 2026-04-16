@@ -95,8 +95,8 @@ export function Features() {
     <section id="features" className="relative overflow-hidden py-28 lg:py-36">
       {/* Background */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
-      <div className="absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-accent/3 blur-[180px]" />
+      <div className="absolute left-0 right-0 top-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" />
+      <div className="absolute right-0 top-1/2 h-150 w-150 -translate-y-1/2 rounded-full bg-accent/3 blur-[180px]" />
 
       <div className="relative w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
         {/* Header */}

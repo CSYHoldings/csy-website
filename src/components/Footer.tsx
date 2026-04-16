@@ -2,6 +2,7 @@
 
 import { links } from "@/constants/links";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const navLinks = [
   { labelKey: "home", href: "#home" },
@@ -21,13 +22,14 @@ export function Footer() {
         <div className="grid gap-16 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-accent">
-                <span className="text-base font-bold text-white">CSY</span>
-              </div>
-              <span className="text-xl font-semibold tracking-tight">
-                {t("brand")}
-              </span>
+            <div className="relative h-16 w-44 overflow-hidden">
+              <Image
+                fill
+                sizes="128px"
+                src="/logo.png"
+                alt={t("brand")}
+                className="object-contain object-left"
+              />
             </div>
             <p className="mt-5 max-w-sm text-base leading-relaxed text-text-secondary">
               {t("description")}
