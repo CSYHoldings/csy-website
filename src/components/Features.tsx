@@ -1,8 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { AnimatedSection } from "./AnimatedSection";
 import { SectionLabel } from "./SectionLabel";
-import { useTranslations } from "next-intl";
 
 const features = [
   {
@@ -121,7 +121,7 @@ export function Features() {
             <AnimatedSection key={feature.number} delay={i * 0.1}>
               <div className="border-gradient group relative overflow-hidden rounded-2xl p-10 transition-all duration-300 hover:bg-surface-light h-full">
                 {/* Number watermark */}
-                <span className="absolute -right-4 -top-6 text-[140px] font-black leading-none text-foreground/[0.02] select-none pointer-events-none">
+                <span className="absolute -right-4 -top-6 text-[140px] font-black leading-none text-foreground/2 select-none pointer-events-none">
                   {feature.number}
                 </span>
 

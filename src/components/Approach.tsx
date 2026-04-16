@@ -1,8 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { AnimatedSection } from "./AnimatedSection";
 import { SectionLabel } from "./SectionLabel";
-import { useTranslations } from "next-intl";
 
 const steps = [
   {
@@ -34,7 +34,7 @@ export function Approach() {
     <section id="approach" className="relative overflow-hidden py-28 lg:py-36">
       {/* Background */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
+      <div className="absolute left-0 right-0 top-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" />
 
       <div className="relative w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
         {/* Header */}
@@ -56,7 +56,7 @@ export function Approach() {
         {/* Steps */}
         <div className="mt-20 relative">
           {/* Connecting line */}
-          <div className="absolute left-[39px] top-0 bottom-0 w-px bg-gradient-to-b from-accent/50 via-purple-500/50 to-rose-500/50 hidden lg:block" />
+          <div className="absolute left-9.75 top-0 bottom-0 w-px bg-linear-to-b from-accent/50 via-purple-500/50 to-rose-500/50 hidden lg:block" />
 
           <div className="space-y-8">
             {steps.map((step, i) => (
@@ -65,7 +65,7 @@ export function Approach() {
                   {/* Number circle */}
                   <div className="relative hidden shrink-0 lg:block">
                     <div
-                      className={`flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br ${step.color} text-xl font-bold text-white shadow-lg shadow-accent/10 transition-transform group-hover:scale-110`}
+                      className={`flex h-20 w-20 items-center justify-center rounded-2xl bg-linear-to-br ${step.color} text-xl font-bold text-white shadow-lg shadow-accent/10 transition-transform group-hover:scale-110`}
                     >
                       {step.number}
                     </div>
@@ -75,7 +75,7 @@ export function Approach() {
                   <div className="border-gradient flex-1 rounded-2xl p-10 transition-all duration-300 group-hover:bg-surface-light">
                     <div className="mb-4 flex items-center gap-4 lg:hidden">
                       <span
-                        className={`inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${step.color} text-sm font-bold text-white`}
+                        className={`inline-flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br ${step.color} text-sm font-bold text-white`}
                       >
                         {step.number}
                       </span>
