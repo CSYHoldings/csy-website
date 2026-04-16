@@ -127,11 +127,13 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-surface-border pt-10 sm:flex-row">
+        <div className="mt-20 border-t border-surface-border pt-10">
           <p className="text-sm text-text-tertiary">
             {t("copyright", { year: new Date().getFullYear() })}
           </p>
-          <p className="text-sm text-text-tertiary">{t("tagline")}</p>
+          <p className="mt-4 max-w-4xl text-sm leading-relaxed text-text-tertiary">
+            {t("disclaimer")}
+          </p>
         </div>
       </div>
     </footer>
