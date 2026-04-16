@@ -60,6 +60,9 @@ export async function generateMetadata({
     metadataBase,
     title: metadata.title,
     description: metadata.description,
+    verification: {
+      google: "OahHilAxcWDeE5Hvl2ki5WV-hTYEzFR9rL8bv5w5q48",
+    },
     applicationName: siteName,
     authors: [{ name: siteName, url: siteUrl }],
     creator: siteName,
