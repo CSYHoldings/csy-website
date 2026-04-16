@@ -53,7 +53,7 @@ export function Navbar() {
                   src="/logo.png"
                   alt={t("brand")}
                   className="object-contain object-left"
-                  priority
+                  preload
                 />
               </div>
             </a>
