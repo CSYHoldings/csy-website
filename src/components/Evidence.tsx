@@ -1,8 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { AnimatedSection, SlideInLeft, SlideInRight } from "./AnimatedSection";
+import { AnimatedSection } from "./AnimatedSection";
 import { SectionLabel } from "./SectionLabel";
 
 const chartTypes = [
@@ -44,10 +45,14 @@ export function Evidence() {
 
         {/* Chart cards */}
         <div className="mt-20 space-y-12">
-          {chartTypes.map((chart, i) => {
-            const Wrapper = i % 2 === 0 ? SlideInLeft : SlideInRight;
-            return (
-              <Wrapper key={chart.key}>
+          {chartTypes.map((chart, i) => (
+            <motion.div
+              key={chart.key}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            >
                 <div className="border-gradient group overflow-hidden rounded-3xl transition-all duration-300 hover:bg-surface-light">
                   <div className="grid items-center gap-0 lg:grid-cols-2">
                     {/* Image */}
@@ -84,9 +89,8 @@ export function Evidence() {
                     </div>
                   </div>
                 </div>
-              </Wrapper>
-            );
-          })}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

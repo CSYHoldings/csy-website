@@ -1,10 +1,11 @@
 "use client";
 
 import { links } from "@/constants/links";
+import { useScrollY } from "@/hooks/useScrollY";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { LanguageSwitch } from "./LanguageSwitch";
 
 const navLinks = [
@@ -18,17 +19,13 @@ const navLinks = [
 export function Navbar() {
   const t = useTranslations("Nav");
   const locale = useLocale();
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const nextLocale = locale === "zh" ? "en" : "zh";
   const nextLocaleHref = `/${nextLocale}`;
   const isZh = locale === "zh";
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const scrollY = useScrollY();
+  const scrolled = scrollY > 50;
 
   return (
     <>
