@@ -4,6 +4,7 @@ import { Features } from "@/components/Features";
 import { Evidence } from "@/components/Evidence";
 import { Approach } from "@/components/Approach";
 import { CTA } from "@/components/CTA";
+import { PartnerWith } from "@/components/PartnerWith";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Features />
       <Approach />
       <Evidence />
+      <PartnerWith />
       <CTA />
     </main>
   );

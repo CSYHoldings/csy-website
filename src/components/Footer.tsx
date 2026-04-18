@@ -10,6 +10,7 @@ const navLinks = [
   { labelKey: "features", href: "#features" },
   { labelKey: "approach", href: "#approach" },
   { labelKey: "evidence", href: "#evidence" },
+  { labelKey: "partners", href: "#partners" },
 ];
 
 export function Footer() {
@@ -55,10 +56,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Community */}
+          {/* Follow Us */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-text-tertiary">
-              {t("community")}
+              {t("followUs")}
             </h4>
             <ul className="mt-5 space-y-4">
               <li>

@@ -14,6 +14,7 @@ const navLinks = [
   { labelKey: "features", href: "#features" },
   { labelKey: "approach", href: "#approach" },
   { labelKey: "evidence", href: "#evidence" },
+  { labelKey: "partners", href: "#partners" },
 ];
 
 export function Navbar() {
@@ -56,7 +57,7 @@ export function Navbar() {
             </a>
 
             {/* Desktop Nav */}
-            <div className="hidden items-center gap-2 md:flex">
+            <div className="hidden items-center gap-2 lg:flex">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -79,13 +80,13 @@ export function Navbar() {
                 href={links.discord}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden rounded-full bg-gradient-accent px-7 py-3 text-base font-medium text-white transition-all hover:shadow-lg hover:shadow-accent/25 hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
+                className="hidden rounded-full bg-gradient-accent px-7 py-3 text-base font-medium text-white transition-all hover:shadow-lg hover:shadow-accent/25 hover:scale-[1.02] active:scale-[0.98] lg:inline-flex"
               >
                 {t("joinDiscord")}
               </a>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="flex h-12 w-12 items-center justify-center rounded-lg transition-colors hover:bg-surface-light md:hidden"
+                className="flex h-12 w-12 items-center justify-center rounded-lg transition-colors hover:bg-surface-light lg:hidden"
                 aria-label={t("toggleMenu")}
               >
                 <div className="relative h-6 w-6">
@@ -124,7 +125,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-x-0 top-20 z-40 border-b border-surface-border bg-background/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-x-0 top-20 z-40 border-b border-surface-border bg-background/95 backdrop-blur-xl lg:hidden"
           >
             <div className="flex flex-col px-8 py-6 gap-2">
               {navLinks.map((link) => (

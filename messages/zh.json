@@ -6,6 +6,7 @@
     "features": "会员内容",
     "approach": "交易方法",
     "evidence": "图表证据",
+    "partners": "合作伙伴",
     "joinDiscord": "加入 Discord",
     "language": "EN",
     "toggleMenu": "打开菜单"
@@ -121,6 +122,23 @@
       }
     }
   },
+  "PartnerWith": {
+    "label": "合作伙伴",
+    "titlePrefix": "携手",
+    "titleAccent": "可信伙伴",
+    "subtitle": "CSY Group 连接市场渠道、交易工具与金融教育伙伴，支持交易者建立更有结构的交易旅程。",
+    "items": {
+      "bitget": {
+        "alt": "Bitget"
+      },
+      "tpTrader": {
+        "alt": "TP Trader"
+      },
+      "rsFinance": {
+        "alt": "RS Finance"
+      }
+    }
+  },
   "CTA": {
     "titlePrefix": "准备好用",
     "titleAccent": "结构交易了吗？",
@@ -136,7 +154,7 @@
     "brand": "CSY Group",
     "description": "一个专注于深度数据、订单流语境与结构化交易计划的 Discord 交易教育社区。",
     "navigation": "导航",
-    "community": "社区",
+    "followUs": "关注我们",
     "discord": "Discord",
     "instagram": "Instagram",
     "joinCommunity": "加入社区",

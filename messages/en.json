@@ -6,6 +6,7 @@
     "features": "Features",
     "approach": "Approach",
     "evidence": "Evidence",
+    "partners": "Partners",
     "joinDiscord": "Join Discord",
     "language": "中文",
     "toggleMenu": "Toggle menu"
@@ -121,6 +122,23 @@
       }
     }
   },
+  "PartnerWith": {
+    "label": "Partner With",
+    "titlePrefix": "Built Alongside",
+    "titleAccent": "Trusted Partners",
+    "subtitle": "CSY Group connects traders with market access, trader tools, and finance education partners that support a more structured trading journey.",
+    "items": {
+      "bitget": {
+        "alt": "Bitget"
+      },
+      "tpTrader": {
+        "alt": "TP Trader"
+      },
+      "rsFinance": {
+        "alt": "RS Finance"
+      }
+    }
+  },
   "CTA": {
     "titlePrefix": "Ready to Trade With",
     "titleAccent": "Structure?",
@@ -136,7 +154,7 @@
     "brand": "CSY Group",
     "description": "A Discord-based trading education community focused on depth data, order-flow context, and structured trade planning.",
     "navigation": "Navigation",
-    "community": "Community",
+    "followUs": "Follow Us",
     "discord": "Discord",
     "instagram": "Instagram",
     "joinCommunity": "Join Community",
