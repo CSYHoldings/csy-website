@@ -135,7 +135,7 @@ export function Footer() {
           <p className="text-sm text-text-tertiary">
             {t("copyright", { year: new Date().getFullYear() })}
           </p>
-          <p className="mt-4 max-w-4xl text-sm leading-relaxed text-text-tertiary">
+          <p className="mt-4 text-sm leading-relaxed text-text-tertiary">
             {t("disclaimer")}
           </p>
         </div>
