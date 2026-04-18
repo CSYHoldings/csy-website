@@ -7,16 +7,16 @@ import { SectionLabel } from "./SectionLabel";
 
 const partners = [
   {
-    key: "bitget",
-    src: "/bitget.png",
-    width: 310,
-    height: 96,
-  },
-  {
     key: "tpTrader",
     src: "/tp_trader.png",
     width: 724,
     height: 107,
+  },
+  {
+    key: "bitget",
+    src: "/bitget.png",
+    width: 310,
+    height: 96,
   },
   {
     key: "rsFinance",
