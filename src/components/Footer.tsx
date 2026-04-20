@@ -102,6 +102,33 @@ export function Footer() {
                   {t("instagram")}
                 </a>
               </li>
+              <li>
+                <a
+                  href={links.emailHref}
+                  className="inline-flex items-center gap-2 text-base text-text-secondary transition-colors hover:text-foreground"
+                >
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3.75 6.75h16.5v10.5H3.75V6.75z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 7.5 12 13.125 19.5 7.5"
+                    />
+                  </svg>
+                  {links.email}
+                </a>
+              </li>
             </ul>
             <div className="mt-8">
               <a
