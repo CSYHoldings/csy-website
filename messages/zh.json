@@ -162,15 +162,14 @@
     "tagline": "精准交易 · 深度数据 · 结构化计划",
     "disclaimer": "内容仅供教育用途。交易存在风险，并可能造成亏损。CSY Group 不提供财务建议，也不保证任何交易结果。"
   },
-  "EventLaunch": {
-    "back": "返回首页",
+  "EventTradingCompetition": {
     "badge": "比赛进行中 · 4月27日 – 6月20日",
     "titlePrefix": "交易",
     "titleAccent": "大赛",
     "subtitle": "CSY Group 与 RS Finance 联合举办为期 8 周的交易大赛。从 4 月 27 日至 6 月 20 日登顶排行榜，赢取香港之旅、丰厚现金奖励与会员专属福利。",
     "primaryCta": "立即报名",
-    "secondaryCta": "加入 Discord",
-    "posterPlaceholder": "活动海报将在此显示",
+    "secondaryCta": "填写参赛表格",
+    "posterAlt": "CSY Group × RS Finance 2026 交易大赛海报",
     "meta": {
       "duration": {
         "label": "比赛期间",
@@ -264,7 +263,7 @@
         "item2": "比赛期间出金任何金额将被取消比赛资格。",
         "item3": "参赛者可以无限次参加，只需注册新的 MT5 账号即可。"
       },
-      "disclaimer": "内容仅供教育用途。交易存在风险，并可能造成亏损。CSY Group 不提供财务建议，也不保证任何交易结果。"
+      "disclaimer": "CSY Group 保留对相关规则作出最终解释与决定的权利。"
     },
     "cta": {
       "titlePrefix": "准备好",

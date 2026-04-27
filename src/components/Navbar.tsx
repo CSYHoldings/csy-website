@@ -27,6 +27,9 @@ export function Navbar() {
   const nextLocaleHref =
     pathname === "/" ? `/${nextLocale}` : `/${nextLocale}${pathname}`;
   const isZh = locale === "zh";
+  const isHome = pathname === "/";
+  const navHref = (anchor: string) =>
+    isHome ? anchor : `/${locale}${anchor}`;
 
   const scrollY = useScrollY();
   const scrolled = scrollY > 50;
@@ -46,7 +49,10 @@ export function Navbar() {
         <div className="w-full max-w-350 mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex h-20 items-center justify-between lg:h-24">
             {/* Logo */}
-            <a href="#home" className="group inline-flex items-center">
+            <a
+              href={navHref("#home")}
+              className="group inline-flex items-center"
+            >
               <div className="relative h-12 w-32 overflow-hidden">
                 <Image
                   fill
@@ -64,7 +70,7 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={navHref(link.href)}
                   className="rounded-lg px-5 py-2.5 text-base text-text-secondary transition-colors hover:text-foreground hover:bg-surface-light"
                 >
                   {t(link.labelKey)}
@@ -134,7 +140,7 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={navHref(link.href)}
                   onClick={() => setMobileOpen(false)}
                   className="rounded-lg px-4 py-3 text-lg text-text-secondary transition-colors hover:text-foreground hover:bg-surface-light"
                 >

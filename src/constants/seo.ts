@@ -62,6 +62,16 @@ export const alternateLanguages = {
   "x-default": `/${routing.defaultLocale}`,
 };
 
+export const eventPaths: Record<SiteLocale, string> = {
+  en: "/en/events/csy-rs-finance-competition-2026",
+  zh: "/zh/events/csy-rs-finance-competition-2026",
+};
+
+export const eventAlternateLanguages = {
+  ...eventPaths,
+  "x-default": eventPaths[routing.defaultLocale as SiteLocale],
+};
+
 export function getAbsoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
 }

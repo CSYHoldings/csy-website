@@ -162,15 +162,14 @@
     "tagline": "Precision Trading · Depth Data · Structured Planning",
     "disclaimer": "Educational content only. Trading involves risk and can result in losses. CSY Group does not provide financial advice or guarantee trading results."
   },
-  "EventLaunch": {
-    "back": "Back to home",
+  "EventTradingCompetition": {
     "badge": "Live Now · Apr 27 – Jun 20",
     "titlePrefix": "Trading",
     "titleAccent": "Competition",
     "subtitle": "CSY Group teams up with RS Finance for an 8-week trading competition. Climb the leaderboard from April 27 to June 20 and compete for a Hong Kong trip, cash prizes, and member-only perks.",
     "primaryCta": "Register Now",
-    "secondaryCta": "Join Discord",
-    "posterPlaceholder": "Event poster will appear here",
+    "secondaryCta": "Submit Entry Form",
+    "posterAlt": "CSY Group × RS Finance Trading Competition 2026 poster",
     "meta": {
       "duration": {
         "label": "Duration",
@@ -260,11 +259,11 @@
       "titleAccent": "Requirements",
       "subtitle": "Make sure you meet these conditions to qualify for prizes.",
       "items": {
-        "item1": "Minimum funded balance of 500 USD. Trading volume during the competition must reach at least 3 lots to qualify.",
+        "item1": "Minimum deposit balance of 500 USD. Trading volume during the competition must reach at least 3 lots to qualify.",
         "item2": "Withdrawing any amount from the trading account during the competition period will result in immediate disqualification.",
         "item3": "Participants can enter unlimited times by registering a new MT5 account under their CSY profile."
       },
-      "disclaimer": "Educational content only. Trading involves risk and can result in losses. CSY Group does not provide financial advice or guarantee trading results."
+      "disclaimer": "CSY Group reserves the right to make the final decision on any matter relating to these rules."
     },
     "cta": {
       "titlePrefix": "Ready to",

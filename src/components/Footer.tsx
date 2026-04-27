@@ -1,7 +1,8 @@
 "use client";
 
 import { links } from "@/constants/links";
-import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const navLinks = [
@@ -16,6 +17,11 @@ const navLinks = [
 export function Footer() {
   const t = useTranslations("Footer");
   const navT = useTranslations("Nav");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const navHref = (anchor: string) =>
+    isHome ? anchor : `/${locale}${anchor}`;
 
   return (
     <footer className="relative border-t border-surface-border bg-surface/50">
@@ -46,7 +52,7 @@ export function Footer() {
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
-                    href={link.href}
+                    href={navHref(link.href)}
                     className="text-base text-text-secondary transition-colors hover:text-foreground"
                   >
                     {navT(link.labelKey)}
