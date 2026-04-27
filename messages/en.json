@@ -161,5 +161,117 @@
     "copyright": "© {year} CSY Group. All Rights Reserved.",
     "tagline": "Precision Trading · Depth Data · Structured Planning",
     "disclaimer": "Educational content only. Trading involves risk and can result in losses. CSY Group does not provide financial advice or guarantee trading results."
+  },
+  "EventLaunch": {
+    "back": "Back to home",
+    "badge": "Live Now · Apr 27 – Jun 20",
+    "titlePrefix": "Trading",
+    "titleAccent": "Competition",
+    "subtitle": "CSY Group teams up with RS Finance for an 8-week trading competition. Climb the leaderboard from April 27 to June 20 and compete for a Hong Kong trip, cash prizes, and member-only perks.",
+    "primaryCta": "Register Now",
+    "secondaryCta": "Join Discord",
+    "posterPlaceholder": "Event poster will appear here",
+    "meta": {
+      "duration": {
+        "label": "Duration",
+        "value": "27 Apr – 20 Jun"
+      },
+      "deposit": {
+        "label": "Min Deposit",
+        "value": "500 USD"
+      },
+      "volume": {
+        "label": "Min Volume",
+        "value": "3 lots"
+      }
+    },
+    "prizes": {
+      "label": "Prize Pool",
+      "titlePrefix": "Compete For",
+      "titleAccent": "Top Rewards",
+      "subtitle": "Climb the leaderboard for these exclusive rewards. Top three finishers walk away with a trip or cash.",
+      "items": {
+        "first": {
+          "rank": "First Place",
+          "title": "Hong Kong WikiFX Trip",
+          "desc": "Round-trip flights and accommodation included — experience the international financial hub firsthand."
+        },
+        "second": {
+          "rank": "Second Place",
+          "title": "1,000 MYR Cash",
+          "desc": "Direct cash reward credited after the competition ends."
+        },
+        "third": {
+          "rank": "Third Place",
+          "title": "500 MYR Cash",
+          "desc": "Direct cash reward credited after the competition ends."
+        }
+      }
+    },
+    "participate": {
+      "label": "How to Participate",
+      "titlePrefix": "Get Started In",
+      "titleAccent": "Four Steps",
+      "subtitle": "Follow these steps to enter the competition and start trading.",
+      "steps": {
+        "step1": {
+          "title": "Register a Trading Account",
+          "desc": "Join the CSY Discord community, then click our exclusive registration link to open a trading account with RS Finance.",
+          "cta": "Open Account"
+        },
+        "step2": {
+          "title": "Already a Member?",
+          "desc": "If you're already with us, simply open a new MT5 account under your existing profile — no need to re-register from scratch."
+        },
+        "step3": {
+          "title": "Submit the Entry Form",
+          "desc": "Once your account is set up, fill out the participation form so we can track your entry and confirm eligibility.",
+          "cta": "Fill Form"
+        },
+        "step4": {
+          "title": "Start Trading",
+          "desc": "You're in. Begin trading and compete for the leaderboard. Tune into the daily live sessions on Discord for analysis and trade calls."
+        }
+      }
+    },
+    "perks": {
+      "label": "Member Perks",
+      "titlePrefix": "Built For",
+      "titleAccent": "Members",
+      "subtitle": "Beyond the prizes, every participant gets these exclusive perks during the competition.",
+      "items": {
+        "live": {
+          "title": "Daily Live Sessions",
+          "desc": "At least one hour of market analysis and trade calls in the competition channel each day, on flexible schedules."
+        },
+        "offline": {
+          "title": "June Offline Event",
+          "desc": "All competitors are automatically included in our June offline meet-up — connect with the community in person."
+        },
+        "lucky": {
+          "title": "Lucky Draws",
+          "desc": "Surprise giveaways and lucky draws drop throughout the competition period for active participants."
+        }
+      }
+    },
+    "terms": {
+      "label": "Competition Rules",
+      "titlePrefix": "Rules &",
+      "titleAccent": "Requirements",
+      "subtitle": "Make sure you meet these conditions to qualify for prizes.",
+      "items": {
+        "item1": "Minimum funded balance of 500 USD. Trading volume during the competition must reach at least 3 lots to qualify.",
+        "item2": "Withdrawing any amount from the trading account during the competition period will result in immediate disqualification.",
+        "item3": "Participants can enter unlimited times by registering a new MT5 account under their CSY profile."
+      },
+      "disclaimer": "Educational content only. Trading involves risk and can result in losses. CSY Group does not provide financial advice or guarantee trading results."
+    },
+    "cta": {
+      "titlePrefix": "Ready to",
+      "titleAccent": "Compete?",
+      "subtitle": "Open your trading account, complete the entry form, and start competing for the top prizes.",
+      "primaryButton": "Register Now",
+      "secondaryButton": "Submit Entry Form"
+    }
   }
 }

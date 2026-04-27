@@ -1,6 +1,7 @@
 "use client";
 
 import { links } from "@/constants/links";
+import { usePathname } from "@/i18n/navigation";
 import { useScrollY } from "@/hooks/useScrollY";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
@@ -22,7 +23,9 @@ export function Navbar() {
   const locale = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
   const nextLocale = locale === "zh" ? "en" : "zh";
-  const nextLocaleHref = `/${nextLocale}`;
+  const pathname = usePathname();
+  const nextLocaleHref =
+    pathname === "/" ? `/${nextLocale}` : `/${nextLocale}${pathname}`;
   const isZh = locale === "zh";
 
   const scrollY = useScrollY();

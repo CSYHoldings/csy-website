@@ -161,5 +161,117 @@
     "copyright": "© {year} CSY Group. 保留所有权利。",
     "tagline": "精准交易 · 深度数据 · 结构化计划",
     "disclaimer": "内容仅供教育用途。交易存在风险，并可能造成亏损。CSY Group 不提供财务建议，也不保证任何交易结果。"
+  },
+  "EventLaunch": {
+    "back": "返回首页",
+    "badge": "比赛进行中 · 4月27日 – 6月20日",
+    "titlePrefix": "交易",
+    "titleAccent": "大赛",
+    "subtitle": "CSY Group 与 RS Finance 联合举办为期 8 周的交易大赛。从 4 月 27 日至 6 月 20 日登顶排行榜，赢取香港之旅、丰厚现金奖励与会员专属福利。",
+    "primaryCta": "立即报名",
+    "secondaryCta": "加入 Discord",
+    "posterPlaceholder": "活动海报将在此显示",
+    "meta": {
+      "duration": {
+        "label": "比赛期间",
+        "value": "4月27日 – 6月20日"
+      },
+      "deposit": {
+        "label": "最低入金",
+        "value": "500 美金"
+      },
+      "volume": {
+        "label": "最低交易量",
+        "value": "3 lot"
+      }
+    },
+    "prizes": {
+      "label": "奖项设置",
+      "titlePrefix": "丰厚奖励",
+      "titleAccent": "等你来赢",
+      "subtitle": "登顶排行榜，赢取以下专属奖励。前三名将获得旅行机会或现金大奖。",
+      "items": {
+        "first": {
+          "rank": "第一名",
+          "title": "香港 WikiFX 之旅",
+          "desc": "机票与住宿全包，亲临国际金融中心，感受真实交易氛围。"
+        },
+        "second": {
+          "rank": "第二名",
+          "title": "1,000 马币现金",
+          "desc": "比赛结束后直接发放的现金奖励。"
+        },
+        "third": {
+          "rank": "第三名",
+          "title": "500 马币现金",
+          "desc": "比赛结束后直接发放的现金奖励。"
+        }
+      }
+    },
+    "participate": {
+      "label": "如何参加比赛",
+      "titlePrefix": "四步",
+      "titleAccent": "开始参赛",
+      "subtitle": "按以下流程报名参加比赛，开始交易。",
+      "steps": {
+        "step1": {
+          "title": "注册交易账号",
+          "desc": "加入 CSY Discord 社区，点击我们的专属注册链接，注册一个 RS Finance 交易账号。",
+          "cta": "立即开户"
+        },
+        "step2": {
+          "title": "已是会员？",
+          "desc": "如果已经是我们的会员，只需要在原来的账号直接开通一个新的 MT5 账号即可，无需重新注册。"
+        },
+        "step3": {
+          "title": "提交参赛表格",
+          "desc": "注册好后，点击链接填写表格，让我们记录你的参赛资料并确认资格。",
+          "cta": "填写表格"
+        },
+        "step4": {
+          "title": "开始交易",
+          "desc": "完成后就可以直接开始交易。每天关注 Discord 上的交易大赛频道，参与盘面分析与单子分享。"
+        }
+      }
+    },
+    "perks": {
+      "label": "比赛期间福利",
+      "titlePrefix": "会员",
+      "titleAccent": "专属",
+      "subtitle": "除了奖金，参赛期间所有会员都可享受以下专属福利。",
+      "items": {
+        "live": {
+          "title": "每日实盘直播",
+          "desc": "比赛期间每天都会在交易大赛频道不定时直播，至少一小时分析盘面与给单子。"
+        },
+        "offline": {
+          "title": "6 月线下活动",
+          "desc": "所有参赛者将自动获得参加 6 月线下活动的资格，与社区面对面交流。"
+        },
+        "lucky": {
+          "title": "幸运抽奖",
+          "desc": "比赛期间将有不定期的幸运抽奖等惊喜，奖励活跃参与者。"
+        }
+      }
+    },
+    "terms": {
+      "label": "比赛规则",
+      "titlePrefix": "参赛",
+      "titleAccent": "须知",
+      "subtitle": "请确保满足以下条件以获得参赛资格。",
+      "items": {
+        "item1": "最低参与金额为 500 美金，比赛期间交易量必须达到至少 3 lot。",
+        "item2": "比赛期间出金任何金额将被取消比赛资格。",
+        "item3": "参赛者可以无限次参加，只需注册新的 MT5 账号即可。"
+      },
+      "disclaimer": "内容仅供教育用途。交易存在风险，并可能造成亏损。CSY Group 不提供财务建议，也不保证任何交易结果。"
+    },
+    "cta": {
+      "titlePrefix": "准备好",
+      "titleAccent": "参赛了吗？",
+      "subtitle": "立即开通交易账号，填写参赛表格，开始争夺顶级奖励。",
+      "primaryButton": "立即报名",
+      "secondaryButton": "填写参赛表格"
+    }
   }
 }
